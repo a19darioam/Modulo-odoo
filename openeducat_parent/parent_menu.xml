@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_op_parent_root" name="EXCO"
+            sequence="110" web_icon="openeducat_parent,static/description/icon.png" />
+
+        <menuitem id="menu_op_parent_main_parent" name="Comedor"
+            parent="menu_op_parent_root" sequence="10" />
+
+        <menuitem id="menu_op_student_sub_parent" name="Alumnos comedor"
+            parent="menu_op_parent_main_parent" sequence="10"
+            action="act_open_op_student_parent_view"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+
+        <menuitem id="menu_op_parent_sub_parent" name="Tutores"
+            parent="menu_op_parent_main_parent" sequence="10"
+            action="act_open_op_parent_view"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+
+<menuitem id="menu_op_menu_sub_parent" name="Menu"
+            parent="menu_op_parent_main_parent" sequence="10"
+            action="openeducat_activity.act_open_op_activity_type_view"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+<menuitem id="menu_op_horario_sub_parent" name="Horario"
+            parent="menu_op_parent_main_parent" sequence="10"
+            action="openeducat_timetable.act_open_op_timing_view"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+
+        
+        <menuitem name="Human Resources" id="hr.menu_hr_root"
+            sequence="110" />
+
+
+        <menuitem id="menu_op_actividades_main_parent" name="Actividades"
+            parent="menu_op_parent_root" sequence="10" />
+
+        <menuitem id="menu_op_alumnosCL_sub_parent" name="Alumnos CL"
+            parent="menu_op_actividades_main_parent" sequence="10"
+            action="act_open_op_student_parent_view"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+<menuitem id="menu_op_aulas_sub_parent" name="Aulas y Pistas"
+            parent="menu_op_actividades_main_parent" sequence="10"
+            action="openeducat_classroom.act_open_op_classroom_view" 
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+<menuitem id="menu_op_pagos_main_parent" name="Pagos"
+            parent="menu_op_parent_root" sequence="10" />
+
+        <menuitem id="menu_op_pagoscl_sub_parent" name="Pagos CL"
+            parent="menu_op_pagos_main_parent" sequence="10"
+            action="payment.action_payment_transaction"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+<menuitem id="menu_op_pagoscomedor_sub_parent" name="Pagos Comedor"
+            parent="menu_op_pagos_main_parent" sequence="10"
+            action="payment.action_payment_transaction"
+            groups="group_op_parent,openeducat_core.group_op_back_office" />
+
+    </data>
+</odoo>
